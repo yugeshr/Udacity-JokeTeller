@@ -8,7 +8,7 @@ public class JokeSupplier {
 
     }
 
-    public static String JokeShow()
+    public static String jokeShow()
     {
         String jokes[]={
                 "Parallel lines have so much in common. It's a shame they're never going to meet\n",

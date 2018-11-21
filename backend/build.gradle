@@ -38,13 +38,18 @@ dependencies {
     appengineSdk 'com.google.appengine:appengine-java-sdk:1.9.59'
     implementation 'com.google.appengine:appengine-endpoints:1.9.59'
     implementation 'com.google.appengine:appengine-endpoints-deps:1.9.59'*/
+    compile project(path: ':javaJokeLibrary')
 }
 appengine {  // App Engine tasks configuration
+    run {
+        host = '0.0.0.0'
+    }
+
     deploy {   // deploy configuration
 
         // The following is used for acceptance tests and
         // is not required for a migration.
-        project = findProperty("appengine.deploy.project")
+        project = findProperty("appengine.deploy.name")
         version = findProperty("appengine.deploy.version")
         def promoteProp = findProperty("appengine.deploy.promote")
         if (promoteProp != null) {

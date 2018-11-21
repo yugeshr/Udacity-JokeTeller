@@ -3,9 +3,9 @@ package ralli.yugesh.com.joketeller.backend;
 import com.google.api.server.spi.config.Api;
 import com.google.api.server.spi.config.ApiMethod;
 import com.google.api.server.spi.config.ApiNamespace;
-import com.udacity.gradle.builditbigger.backend.MyBean;
+import com.google.api.server.spi.config.Named;
 
-import javax.inject.Named;
+import ralli.yugesh.com.javajokelibrary.JokeSupplier;
 
 /** An endpoint class we are exposing */
 @Api(
@@ -19,12 +19,17 @@ import javax.inject.Named;
 )
 public class MyEndpoint {
 
-    /** A simple endpoint method that takes a name and says Hi back */
+    @ApiMethod(name = "getJokeService")
+    public MyBean getJokeService(){
+        MyBean response = new MyBean();
+        response.setData(JokeSupplier.jokeShow());
+        return response;
+    }
+    /** A simple endpoint method that takes a name and says Hi back*/
     @ApiMethod(name = "sayHi")
     public MyBean sayHi(@Named("name") String name) {
         MyBean response = new MyBean();
-        response.setData("Hi, " + name);
-
+        response.setData(JokeSupplier.jokeShow());
         return response;
     }
 
