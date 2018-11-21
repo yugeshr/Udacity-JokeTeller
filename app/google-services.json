@@ -1,0 +1,99 @@
+{
+  "project_info": {
+    "project_number": "1090395969260",
+    "firebase_url": "https://joketeller-46cd7.firebaseio.com",
+    "project_id": "joketeller-46cd7",
+    "storage_bucket": "joketeller-46cd7.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1090395969260:android:ab6b3cb4a7f76c24",
+        "android_client_info": {
+          "package_name": "ralli.yugesh.com.joketeller.free"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1090395969260-et864ha8va85jlf5l8g27l2o3nvk4fqj.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "ralli.yugesh.com.joketeller.free",
+            "certificate_hash": "b404348b9e2dbc6deb28d2c26e0a557de59bb3c1"
+          }
+        },
+        {
+          "client_id": "1090395969260-17ck46kc0oqk2tjoe54a9fvts67bb581.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC2ppm1FzNKAsg42wGKC8w8LDSolLyx25o"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1090395969260-17ck46kc0oqk2tjoe54a9fvts67bb581.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1090395969260:android:fa9a764c602601f5",
+        "android_client_info": {
+          "package_name": "ralli.yugesh.com.joketeller.paid"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1090395969260-pif6lo69ci90ca0ouin38pq3tnp1f2ma.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "ralli.yugesh.com.joketeller.paid",
+            "certificate_hash": "b404348b9e2dbc6deb28d2c26e0a557de59bb3c1"
+          }
+        },
+        {
+          "client_id": "1090395969260-17ck46kc0oqk2tjoe54a9fvts67bb581.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC2ppm1FzNKAsg42wGKC8w8LDSolLyx25o"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1090395969260-17ck46kc0oqk2tjoe54a9fvts67bb581.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
