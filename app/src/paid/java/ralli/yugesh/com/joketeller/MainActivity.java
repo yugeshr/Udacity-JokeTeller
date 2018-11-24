@@ -1,13 +1,40 @@
 package ralli.yugesh.com.joketeller;
 
-import android.support.v7.app.AppCompatActivity;
+import android.content.Intent;
 import android.os.Bundle;
+import android.provider.Settings;
+import android.support.v7.app.AppCompatActivity;
+import android.view.View;
+import android.widget.Button;
 
-public class MainActivity extends AppCompatActivity {
+import ralli.yugesh.com.androidjokelibrary.JokeDisplayActivity;
+
+public class MainActivity extends AppCompatActivity implements OnJokeReceiver{
+
+    Button btnJoke;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        btnJoke = findViewById(R.id.btn_joke);
+        btnJoke.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                showJoke();
+            }
+        });
+    }
+
+    private void showJoke() {
+        new EndpointsAsyncTask(this).execute();
+    }
+
+    @Override
+    public void Joke(String joke) {
+        Intent intentJoke = new Intent(getApplicationContext(), JokeDisplayActivity.class);
+        intentJoke.putExtra(getString(R.string.joke),joke);
+        startActivity(intentJoke);
     }
 }

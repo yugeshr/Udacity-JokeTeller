@@ -1,7 +1,20 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="ralli.yugesh.com.joketeller">
+    xmlns:tools="http://schemas.android.com/tools">
 
-    <application>
-        <activity android:name="ralli.yugesh.com.joketeller.MainActivity"></activity>
+    <application
+        android:label="Joketeller Paid"
+        tools:replace="android:label">
+
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="ca-app-pub-2573283184023373~7134024490"/>
+
+        <activity android:name="ralli.yugesh.com.joketeller.MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
     </application>
+
 </manifest>

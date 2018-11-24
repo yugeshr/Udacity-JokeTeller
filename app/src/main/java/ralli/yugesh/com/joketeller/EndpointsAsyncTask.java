@@ -4,6 +4,8 @@ import android.os.AsyncTask;
 
 import com.google.api.client.extensions.android.http.AndroidHttp;
 import com.google.api.client.extensions.android.json.AndroidJsonFactory;
+import com.google.api.client.googleapis.services.AbstractGoogleClientRequest;
+import com.google.api.client.googleapis.services.GoogleClientRequestInitializer;
 
 import java.io.IOException;
 
@@ -23,7 +25,13 @@ public class EndpointsAsyncTask extends AsyncTask<OnJokeReceiver,Void,String> {
         if (myApi==null){
             MyApi.Builder builder = new MyApi.Builder(AndroidHttp
                     .newCompatibleTransport(), new AndroidJsonFactory(),null)
-                    .setRootUrl("https://udacity-jokes-223111.appspot.com/_ah/api/");
+                    .setRootUrl("http://10.0.2.2:8080/_ah/api/")
+                    .setGoogleClientRequestInitializer(new GoogleClientRequestInitializer() {
+                        @Override
+                        public void initialize(AbstractGoogleClientRequest<?> request) throws IOException {
+                            request.setDisableGZipContent(true);
+                        }
+                    });
             myApi =  builder.build();
         }
 
