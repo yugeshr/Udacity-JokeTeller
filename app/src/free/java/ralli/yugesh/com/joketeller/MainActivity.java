@@ -6,6 +6,7 @@ import android.provider.Settings;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ProgressBar;
 
 //Google AdMob
 import com.google.android.gms.ads.AdRequest;
@@ -15,7 +16,9 @@ import ralli.yugesh.com.androidjokelibrary.JokeDisplayActivity;
 
 public class MainActivity extends AppCompatActivity implements OnJokeReceiver {
 
-    Button btnJoke;
+    private Button btnJoke;
+    private ProgressBar progressBar;
+
     //Google AdMob Object
     private AdView mAdView;
 
@@ -36,6 +39,9 @@ public class MainActivity extends AppCompatActivity implements OnJokeReceiver {
             }
         });
 
+        progressBar = findViewById(R.id.progressBar);
+        progressBar.setVisibility(View.INVISIBLE);
+
         //Google AdMob Loader
         mAdView = findViewById(R.id.adView);
         AdRequest adRequest = new AdRequest.Builder()
@@ -45,6 +51,7 @@ public class MainActivity extends AppCompatActivity implements OnJokeReceiver {
     }
 
     private void showJoke() {
+        progressBar.setVisibility(View.VISIBLE);
         new EndpointsAsyncTask(this).execute();
     }
 
@@ -53,5 +60,11 @@ public class MainActivity extends AppCompatActivity implements OnJokeReceiver {
         Intent intentJoke = new Intent(getApplicationContext(), JokeDisplayActivity.class);
         intentJoke.putExtra(getString(R.string.joke),joke);
         startActivity(intentJoke);
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        progressBar.setVisibility(View.INVISIBLE);
     }
 }

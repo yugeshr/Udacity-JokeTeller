@@ -23,6 +23,15 @@
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"/>
 
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/btn_joke"
+        android:progressDrawable="@drawable/circular_progress_bar"/>
+
     <com.google.android.gms.ads.AdView
         android:id="@+id/adView"
         android:layout_width="wrap_content"

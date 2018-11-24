@@ -1,5 +1,5 @@
 package ralli.yugesh.com.joketeller;
 
-public interface OnJokeReceiver {
+interface OnJokeReceiver {
     public void Joke(String joke);
 }

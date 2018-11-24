@@ -11,10 +11,10 @@ import java.io.IOException;
 
 import ralli.yugesh.com.joketeller.backend.myApi.MyApi;
 
-public class EndpointsAsyncTask extends AsyncTask<OnJokeReceiver,Void,String> {
+class EndpointsAsyncTask extends AsyncTask<OnJokeReceiver,Void,String> {
 
-    MyApi myApi=null;
-    OnJokeReceiver onJokeReceiver;
+    private MyApi myApi=null;
+    private OnJokeReceiver onJokeReceiver;
 
     public EndpointsAsyncTask(OnJokeReceiver onJokeReceiver){
         this.onJokeReceiver = onJokeReceiver;
