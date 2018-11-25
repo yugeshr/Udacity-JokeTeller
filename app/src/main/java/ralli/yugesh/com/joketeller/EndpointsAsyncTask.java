@@ -38,7 +38,7 @@ class EndpointsAsyncTask extends AsyncTask<OnJokeReceiver,Void,String> {
         try {
             return myApi.sayHi("Joke").execute().getData();
         } catch (IOException e) {
-            return e.getMessage();
+            return null;
         }
     }
 
