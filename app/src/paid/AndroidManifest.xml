@@ -5,10 +5,6 @@
         android:label="Joketeller Paid"
         tools:replace="android:label">
 
-        <meta-data
-            android:name="com.google.android.gms.ads.APPLICATION_ID"
-            android:value="ca-app-pub-2573283184023373~7134024490"/>
-
         <activity android:name="ralli.yugesh.com.joketeller.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
